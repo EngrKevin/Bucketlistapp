@@ -1,12 +1,39 @@
-# React + Vite
+# Bucket List Tracker App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **React** application to manage your bucket list items, integrated with **AWS Amplify** for backend services and hosting.
 
-Currently, two official plugins are available:
+## Features
+- User authentication (Login/Signup) with Amplify Auth
+- CRUD operations for bucket list items
+- Upload and store images with S3
+- Real-time data via AWS AppSync GraphQL API
+- Frontend hosted on AWS Amplify Hosting
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- **Frontend**: React, Vite, Amplify UI  
+- **Backend**: AWS Amplify, AppSync, Lambda  
+- **Database**: DynamoDB  
+- **Storage**: S3  
+- **API**: GraphQL  
 
-## Expanding the ESLint configuration
+## Setup & Run
+```bash
+git clone https://github.com/EngrKevin/Bucketlistapp.git
+cd bucketlistapp
+npm install
+npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Open http://localhost:5174/ in your browser.
+
+Deployment
+git add .
+git commit -m "Update app"
+git push origin main
+amplify push
+
+Services Used 🛠
+
+AWS Amplify: Frontend & backend hosting
+AWS AppSync: GraphQL API
+DynamoDB: Data storage
+S3: Image storage
